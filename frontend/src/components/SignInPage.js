@@ -1,40 +1,56 @@
 import React from 'react'
+// import { Link, withRouter } from 'react-router-dom'
+import { login } from '../lib/api'
 
-const SignInPage = () => {
+class SignInPage extends React.Component {
 
-  const [username, setusername] = React.useState('')
-  const [password, setpassword] = React.useState('')
+  state = {
+    formData: {
+      username: '',
+      password: '',
+      type: 'USER_PASSWORD_AUTH',
+    },
+  }
 
-  // const type = 'USER_PASSWORD_AUTH'
 
-  const handleChange = (e) => {
-    if (e.target.id === 'username') {
-      setusername(e.target.value)
-    } else if (e.target.id === 'password') {
-      setpassword(e.target.value)
+  handleChange = (e) => {
+    const formData = { ...this.state.formData, [e.target.id]: e.target.value }
+    this.setState({ formData })
+  }
+
+  handleSubmit = async e => {
+    e.preventDefault()
+
+    try {
+      const res = await login(this.state.formData)
+      window.localStorage.setItem('token', res.data.access_token)
+      this.props.history.push('/policy')
+    } catch (err) {
+      console.log(err)
     }
   }
 
-  console.log('Username is:', username)
-  console.log('Password is:', password)
 
-  return (
-    <div className='outer-wrapper'>
-      <div className='form-container window'>
-        <form>
-          <label htmlFor='username'>
-            User Name:
-          </label>
-          <input id='username' type='text' value={username} onChange={handleChange}/>
-          <label htmlFor='password'>
-            Password:
-          </label>
-          <input id='password' type='text' value={password} onChange={handleChange}/>
-          <input type='submit' value='Sign In'/>
-        </form>
+  render() {
+    console.log(this.state.formData)
+    return (
+      <div className='outer-wrapper'>
+        <div className='form-container window'>
+          <form onSubmit={this.handleSubmit}>
+            <label htmlFor='username'>
+              User Name:
+            </label>
+            <input id='username' type='text' placeholder='Please enter your User Name' value={this.state.formData.username} onChange={this.handleChange}/>
+            <label htmlFor='password'>
+              Password:
+            </label>
+            <input id='password' type='password' placeholder='Please enter your Password' value={this.state.formData.password} onChange={this.handleChange}/>
+            <input type='submit' value='Sign In' className='submit-btn'/>
+          </form>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default SignInPage

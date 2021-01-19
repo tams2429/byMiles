@@ -19,6 +19,35 @@
       input {
         margin-bottom: 8%;
       }
+      .submit-btn {
+        width: 35%;
+        align-self: flex-end;
+        border-radius: 5px;
+        padding: 10px 20px;
+        background-color: white;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+      .submit-btn:hover {
+        background-color: black;
+        color: white;
+      }
+      // a {
+      //   width: 35%;
+      //   align-self: flex-end;
+      //   .submit-btn {
+      //     border-radius: 5px;
+      //     padding: 10px 20px;
+      //     background-color: white;
+      //     border: 1px solid black;
+      //     cursor: pointer;
+      //   }
+      //   .submit-btn:hover {
+      //     background-color: black;
+      //     color: white;
+      //   }
+      // }
+
     }
   }
 }
