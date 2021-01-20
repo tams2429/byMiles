@@ -28,11 +28,7 @@ class SignInPage extends React.Component {
   }
 
   isNotValid = () => {
-    if (this.state.formData.username  === '' || this.state.formData.password === '') {
-      return true
-    } else {
-      return false
-    }
+    return (this.state.formData.username  === '' || this.state.formData.password === '')
   }
 
   render() {
