@@ -14,7 +14,7 @@ A simple, **web application** that takes **returns information** about the **use
 
 The **API** which contains the **insurance policy information** has been **provided** to help with the task. The **technical stack** has **not been specified** and I was free to choose what I am most comfortable in.
 
-In total the task took around ....hrs/days. Though most of this was attributed to learning more and applying certain testing technniques which were new to me.
+In total the task took around 5hrs. Though most of this was attributed to learning more and applying certain testing technniques which were new to me as well as making a 'Private route' to the insurance information to ensure that
 
 ## Technologies 💻
 
@@ -43,6 +43,8 @@ In total the task took around ....hrs/days. Though most of this was attributed t
 
 - After completing the Front-End components, I moved on to **setting up** the **API requests** and **handling** and **presenting** the **response data**.
 
+- I also added a functionality to **disable** the **'Sign in' button** should there be **no inputs** for the **'Username'** and **'Password'** fields. This acts as a **basic form validation**.
+
 - Throughout this process, I had set up a number of tests, though not exhaustive due to my inexperience with testing (i.e. unit testing)
 
 ### MVP
@@ -61,6 +63,7 @@ If you wish to **run it locally**, you will need to **follow the steps below**:
 
 ## Future Work ☕
 
-### Planned/Incomplete features
+### Assumptions
+- In reality, it is assumed that only **registered users** with have information attributed to their **insurance policy**. As a result, even if users are able to go straight to the 'Policy' page with the **URL path '/policy'** there will be **no information** as the **API request will fail**. As a result, I have **not** deemed it **necessary** to make the **'Policy' page**, a **'Private route'**.
 
 -
