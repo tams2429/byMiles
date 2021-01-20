@@ -32,10 +32,11 @@ class SignInPage extends React.Component {
 
 
   render() {
-    console.log(this.state.formData)
     return (
       <div className='outer-wrapper'>
         <div className='form-container window'>
+          <h1>Sign In</h1>
+          <hr />
           <form onSubmit={this.handleSubmit}>
             <label htmlFor='username'>
               User Name:
