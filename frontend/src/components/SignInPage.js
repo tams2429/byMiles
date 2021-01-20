@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link, withRouter } from 'react-router-dom'
 import { login } from '../lib/api'
 
 class SignInPage extends React.Component {
@@ -12,7 +11,6 @@ class SignInPage extends React.Component {
     },
   }
 
-
   handleChange = (e) => {
     const formData = { ...this.state.formData, [e.target.id]: e.target.value }
     this.setState({ formData })
@@ -20,7 +18,6 @@ class SignInPage extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault()
-
     try {
       const res = await login(this.state.formData)
       window.localStorage.setItem('token', res.data.access_token)
@@ -30,6 +27,13 @@ class SignInPage extends React.Component {
     }
   }
 
+  isNotValid = () => {
+    if (this.state.formData.username  === '' || this.state.formData.password === '') {
+      return true
+    } else {
+      return false
+    }
+  }
 
   render() {
     return (
@@ -46,7 +50,7 @@ class SignInPage extends React.Component {
               Password:
             </label>
             <input id='password' type='password' placeholder='Please enter your Password' value={this.state.formData.password} onChange={this.handleChange}/>
-            <input type='submit' value='Sign In' className='submit-btn'/>
+            <input type='submit' value='Sign In' className={this.isNotValid() ? 'disabled-btn' : 'submit-btn'} disabled={this.isNotValid()}/>
           </form>
         </div>
       </div>

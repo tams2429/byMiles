@@ -27,12 +27,23 @@ hr {
     width: 30%;
     height: 50%;
     border: 2px solid black;
+    border-radius: 10px;
     padding: 2%;
     form {
       display: flex;
       flex-direction: column;
       input {
         margin-bottom: 8%;
+      }
+      .disabled-btn {
+        width: 35%;
+        align-self: flex-end;
+        border-radius: 5px;
+        padding: 3% 5%;
+        background-color: lightgray;
+        color: gray;
+        border: none;
+        cursor: pointer;
       }
       .submit-btn {
         width: 35%;
@@ -47,22 +58,6 @@ hr {
         background-color: black;
         color: white;
       }
-      // a {
-      //   width: 35%;
-      //   align-self: flex-end;
-      //   .submit-btn {
-      //     border-radius: 5px;
-      //     padding: 10px 20px;
-      //     background-color: white;
-      //     border: 1px solid black;
-      //     cursor: pointer;
-      //   }
-      //   .submit-btn:hover {
-      //     background-color: black;
-      //     color: white;
-      //   }
-      // }
-
     }
   }
 }

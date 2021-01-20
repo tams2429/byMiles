@@ -12,7 +12,6 @@ class PolicyPage extends React.Component {
     const token = window.localStorage.getItem('token')
     try {
       const res = await policy(token)
-      console.log(res)
       this.setState({ insuranceData: res.data })
     } catch (err) {
       console.log(err)
@@ -20,7 +19,6 @@ class PolicyPage extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     if (this.state.insuranceData === null) {
       return null
     } else {
@@ -48,7 +46,6 @@ class PolicyPage extends React.Component {
           </div>
         </div>
       )
-
     }
   }
 }
