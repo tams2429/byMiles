@@ -10,11 +10,11 @@
 
 ## Overview 👓
 
-A simple, **web application** that takes **returns information** about the **user's insurance policy** once **logged in**.
+A simple, **web application** that **returns information** about the **user's insurance policy** once **logged in**.
 
 The **API** which contains the **insurance policy information** has been **provided** to help with the task. The **technical stack** has **not been specified** and I was free to choose what I am most comfortable in.
 
-In total, the task took around **5hrs**. Though some of this was attributed to trying to learn more about Test Driven Development and figuring out how to apply certain testing technniques to this challenge. In the end, rather than trying to write tests which I am not experienced in, I have listed out the tests that I would have carried out if given more time and practice, in the 'Future Work' section below.
+In total, the task took around **5hrs**. Though some of this was attributed to **trying to learn** more about **Test Driven Development** and figuring out how to **apply certain testing technniques** to this challenge. In the end, rather than trying to write tests which I am **not experienced in**, I have **listed out the tests** that I would have carried out if given more time and practice, in the **'Future Work'** section below.
 
 
 ## Technologies 💻
@@ -22,6 +22,7 @@ In total, the task took around **5hrs**. Though some of this was attributed to t
 - General:
     - **HTML5**
     - **CSS3**
+    - **Sass**
     - **React**
 - Others:
     - **GitHub**
@@ -42,14 +43,13 @@ In total, the task took around **5hrs**. Though some of this was attributed to t
 
 ![Wireframe](./ReadmeResources/Wireframe.png)
 
-- After completing the Front-End components, I moved on to **setting up** the **API requests** and **handling** and **presenting** the **response data**.
+- After **completing** the **Front-End components**, I moved on to **setting up** the **API requests** and **handling** and **presenting** the **response data**.
 
 - I also added a functionality to **disable** the **'Sign in' button** should there be **no inputs** for the **'Username'** and **'Password'** fields. This acts as a **basic form validation**.
 
-- Throughout this process, I had set up a number of tests, though not exhaustive due to my inexperience with testing (i.e. unit testing)
 
 ### MVP
-- **GitHub repository** containing project code
+- **GitHub repository** containing **project code**
 - **Readme document** containing **thought processes** and **any assumptions made**
 - **Estimation of time** spent
 - A **simple**, **web application** which takes a **'username' and 'password'**, upon **successful log in**, **'insurance policy' information** is **returned** and **presented** to the **user** on the application
@@ -58,7 +58,7 @@ In total, the task took around **5hrs**. Though some of this was attributed to t
 
 If you wish to **run it locally**, you will need to **follow the steps below**:
 
-- **Fork** or **Clone** the GitHub repository ([https://github.com/tams2429/byMiles](https://github.com/tams2429/byMiles)),
+- **Fork** or **Clone** the **GitHub repository** ([https://github.com/tams2429/byMiles](https://github.com/tams2429/byMiles)),
 - In the root project folder, run `npm install` to **install** all **dependencies**,
 - `npm start` to **start the development server** for the **whole application**,
 
@@ -72,4 +72,3 @@ As mentioned, I didn't feel comfortable/experienced enough to be writing tests (
 ### Assumptions
 - In reality, it is assumed that only **registered users** with have information attributed to their **insurance policy**. As a result, even if users are able to go straight to the 'Policy' page with the **URL path '/policy'** there will be **no information** as the **API request will fail**. As a result, I have **not** deemed it **necessary** to make the **'Policy' page**, a **'Private route'**.
 
--
